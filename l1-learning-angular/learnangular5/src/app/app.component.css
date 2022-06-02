@@ -1,0 +1,9 @@
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+}
+
+.artist-active {
+  background-color: #EEE;
+}
