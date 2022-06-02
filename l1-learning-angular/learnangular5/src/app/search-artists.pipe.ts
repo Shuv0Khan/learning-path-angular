@@ -1,0 +1,16 @@
+import {Pipe, PipeTransform} from '@angular/core';
+import {Artist} from "./app.component";
+
+@Pipe({
+  name: 'searchArtists'
+})
+export class SearchArtistsPipe implements PipeTransform {
+
+  transform(pipeData: Artist[], pipeModifier: string): Artist[] {
+    return pipeData.filter(item => {
+      return item.name.toLowerCase().includes(pipeModifier.toLowerCase()) ||
+        item.reknown.toLowerCase().includes(pipeModifier.toLowerCase());
+    });
+  }
+
+}
